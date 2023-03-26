@@ -35,9 +35,6 @@ export default function Layout({children,home}){
 						width={144}
 						alt="error"
 					/>
-					<img
-						src={"./profile.jpg"}
-					/>
 					<h1 className={utilStyles.heading2Xl}>{name}</h1>
 				</>
 				):(
