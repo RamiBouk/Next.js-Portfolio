@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from '../styles/utils.module.css';
 import styles from'./layout.module.css';
 import utilStyles from'../styles/utils.module.css';
+import profilePic from '../public/profile.jpg';
 
 const name='Rami B.'
 export const siteTitle='next.js sample website'
@@ -34,17 +35,8 @@ export default function Layout({children,home}){
 						width={144}
 						alt="error"
 					/>
-					<Image
-						priority
-						src={profile}
-						className={utilStyles.borderCircle}
-						height={144}
-						width={144}
-						alt="error"
-					/>
-					<Image
-						priority
-						src="./images/profile.jpg"
+					<img
+						src="/profile.jpg"
 						className={utilStyles.borderCircle}
 						height={144}
 						width={144}
