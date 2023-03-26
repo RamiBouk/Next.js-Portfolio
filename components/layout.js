@@ -29,18 +29,14 @@ export default function Layout({children,home}){
 				{home?(<>
 					<Image
 						priority
-						src="./Next.js-Portfolio/profile.jpg"
+						src="./profile.jpg"
 						className={utilStyles.borderCircle}
 						height={144}
 						width={144}
 						alt="error"
 					/>
 					<img
-						src="./Next.js-Portfolio/profile.jpg"
-						className={utilStyles.borderCircle}
-						height={144}
-						width={144}
-						alt="error"
+						src={"./profile.jpg"}
 					/>
 					<h1 className={utilStyles.heading2Xl}>{name}</h1>
 				</>
