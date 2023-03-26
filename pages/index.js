@@ -10,7 +10,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>C5omputer science student with a strong work ethic, a passion for computer science and a solid foundation in math. 
+        <p>C7omputer science student with a strong work ethic, a passion for computer science and a solid foundation in math. 
           Experienced in developing and testing cross-platform mobile applications. 
         Worked for an international software development company. 
         Fluent in three languages and currently learning German.</p>
