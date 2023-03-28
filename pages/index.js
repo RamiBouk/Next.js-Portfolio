@@ -13,7 +13,7 @@ export default function Home() {
         <p>Computer science student with a strong work ethic, a passion for computer science and a solid foundation in math. 
           Experienced in developing and testing cross-platform mobile applications. 
         Worked for an international software development company. 
-        Fluent in three languages and currently learning German.</p>
+       </p>
       </section>
     </Layout>
     </>
