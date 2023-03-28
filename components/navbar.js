@@ -2,19 +2,26 @@ import {useState} from "react";
 import Link from "next/link";
 
 export default function NavBar(){
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState();
+  const [color, setColor] = useState("black");
 
-  return  <nav className="w-full bg-black shadow">
-    <div className="justify-between px-4 mx-auto lg:max-w-21xl md:items-center md:flex md:px-8">
+  return  <nav className={'w-full bg-' +color +' shadow'}>
+    <div className="
+      transition transform ease-in-out duration-900
+      bg-gray-800
+      hover:bg-black
+
+      justify-between px-4 mx-auto lg:max-w-21xl md:items-center md:flex md:px-8"
+
+       >
       <div>
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <h2 className="text-2xl text-white font-bold">
             <Link href="#"className="text-white">
               NEXT JS          </Link></h2>
-
           <div className="md:hidden">
             <button
-              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" onClick={() => setNavbar(!navbar)}
+              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" onClick={() => {setNavbar(!navbar);}}
             >
               {navbar ? (
                 <svg
@@ -74,6 +81,7 @@ export default function NavBar(){
               <Link href="/contact"className="text-white">
                 Contact US
               </Link>
+
             </li>
           </ul>
         </div>
