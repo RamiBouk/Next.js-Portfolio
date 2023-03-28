@@ -14,6 +14,9 @@ export default function Home() {
           Experienced in developing and testing cross-platform mobile applications. 
         Worked for an international software development company. 
        </p>
+            <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
       </section>
     </Layout>
     </>
