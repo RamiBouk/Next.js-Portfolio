@@ -68,7 +68,7 @@ export default function NavBar(){
               </Link>
             </li>
             <li className="text-white">
-              <Link href="/blogs"className="text-white">
+              <Link href="/page2"className="text-white">
                 Blogs
               </Link>
             </li>
