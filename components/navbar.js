@@ -6,6 +6,12 @@ import Image from "next/image";
 export default function NavBar(){
   const [navbar, setNavbar] = useState();
   const [color, setColor] = useState("black");
+  const routes=[
+    {name:"Home",url:"/page2",children:[]},
+    {name:"Blogs",url:"/page2",children:[]},
+    {name:"About US",url:"/page2",children:[]},
+    {name:"Contact Us",url:"/",children:[]},
+  ]
 
   return  <nav className={'w-full bg-' +color +' shadow'}>
     <div className="
@@ -67,27 +73,16 @@ export default function NavBar(){
 `}
         >
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-            <li className="text-white">
-              <Link href="/"className="text-white">
-                Home
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link href="/page2"className=" bold text-white">
-                Blogs
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link href="/about" className="text-white">
-                About US
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link href="/contact"className="text-white">
-                Contact US
-              </Link>
 
-            </li>
+            {routes.map(route => 
+            (<li className="text-white">
+              <div className="">
+              <Link href={route.url} className="h-12 text-white">
+                {route.name}
+              </Link>
+                </div>
+            </li>)
+            )}
           </ul>
         </div>
       </div>

@@ -10,13 +10,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function Page2() {
   return (
-    <div>
-      <center>
-      <SimpleSlider autoplay={true}/>
-        hey
-        <>
-          </>
-      </center>
-    </div>
+<center>
+      <SimpleSlider />
+</center>
+
   );
 }
