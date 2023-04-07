@@ -48,14 +48,12 @@ export default function SimpleSlider(){
   };
   return (
     <div className='pb-6'>
-      <Slider {...settings} className={"pt-8 "}>
+      <Slider {...settings} className={" pt-8 "}>
         {slideImages.map((slideImage, index)=> (
-          <div key={index} 
-            className='cursor-pointer'
-            onClick={()=>{console.log("hey");}}>
+          <div className=''>
             <Image
               src={slideImage.img}
-              className="h-96 w-4/5 object-cover"
+              className="h-[18rem]  md:h-[28rem]  object-cover"
             />
           </div>
         ))} 

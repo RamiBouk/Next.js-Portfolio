@@ -36,21 +36,10 @@ export default function NavBar(){
           </Link>
           <div className="md:hidden">
             <button
-              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" onClick={() => {setNavbar(!navbar);}}
+              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+              onClick={() => {setNavbar(!navbar);}}
             >
-              {navbar ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-white"treesitter nvim
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ) : (
+              {(
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6 text-white"
