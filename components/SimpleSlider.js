@@ -53,6 +53,7 @@ export default function SimpleSlider(){
           <div className=''>
             <Image
               src={slideImage.img}
+              border="none"
               className="h-[18rem]  md:h-[28rem]  object-cover"
             />
           </div>

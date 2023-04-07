@@ -10,15 +10,14 @@ export default function NavBar(){
   return  <nav className={'w-full bg-' +color +' shadow'}>
     <div className="
       transition transform ease-in-out duration-900
-      bg-gray-800
+      bg-[#004AADff]
       hover:bg-black
-
       justify-between px-4 mx-auto lg:max-w-21xl md:items-center md:flex md:px-8"
 
        >
       <div>
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link href="#"className="text-white">
+          <Link href="#"className="hover:no-underline text-white">
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li>
             <Image
@@ -26,8 +25,10 @@ export default function NavBar(){
               className="h-10 w-10"
             />
             </li>
-            <li className="hidden md:block">
-          <h2 className="text-2xl text-white font-bold">
+            <li className="hidden no-underline md:block">
+              <h2 className={'text-2xl hover:text-white text-['+
+                (color=='black'?('#FFFFFFFF'):('#FFFF01ff'))+
+                '] font-bold'}>
               
               EAS          </h2>
             </li>
@@ -39,7 +40,7 @@ export default function NavBar(){
               className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
               onClick={() => {setNavbar(!navbar);}}
             >
-              {(
+              
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6 text-white"
@@ -54,7 +55,6 @@ export default function NavBar(){
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
-              )}
             </button>
           </div>
         </div>
@@ -63,7 +63,8 @@ export default function NavBar(){
         <div
           className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                 navbar ? 'block' : 'hidden'
-              }`}
+              } transition transform ease-in-out duration-900
+`}
         >
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li className="text-white">
@@ -72,7 +73,7 @@ export default function NavBar(){
               </Link>
             </li>
             <li className="text-white">
-              <Link href="/page2"className="text-white">
+              <Link href="/page2"className=" bold text-white">
                 Blogs
               </Link>
             </li>
