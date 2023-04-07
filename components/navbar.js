@@ -22,13 +22,13 @@ export default function NavBar(){
 
        >
       <div>
-        <div className="flex items-center justify-between py-3 md:py-5 md:block">
+        <div className="flex items-center justify-between py-1 md:py-1 md:block">
           <Link href="#"className="hover:no-underline text-white">
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li>
             <Image
             src={logo}
-              className="h-10 w-10"
+              className="h-[4rem] w-[4rem] "
             />
             </li>
             <li className="hidden no-underline md:block">
