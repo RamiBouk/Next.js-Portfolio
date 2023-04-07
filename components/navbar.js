@@ -1,5 +1,7 @@
 import {useState} from "react";
 import Link from "next/link";
+import logo from "../public/EAS_logo.png";
+import Image from "next/image";
 
 export default function NavBar(){
   const [navbar, setNavbar] = useState();
@@ -16,9 +18,22 @@ export default function NavBar(){
        >
       <div>
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <h2 className="text-2xl text-white font-bold">
             <Link href="#"className="text-white">
-              NEXT JS          </Link></h2>
+          <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <li>
+            <Image
+            src={logo}
+              className="h-10 w-10"
+            />
+            </li>
+            <li className="hidden md:block">
+          <h2 className="text-2xl text-white font-bold">
+              
+              EAS          </h2>
+            </li>
+          </ul>
+
+          </Link>
           <div className="md:hidden">
             <button
               className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" onClick={() => {setNavbar(!navbar);}}

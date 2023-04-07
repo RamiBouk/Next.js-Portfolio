@@ -9,6 +9,7 @@ import pic1 from '../public/eas1.jpg';
 import pic2 from '../public/eas2.jpg';
 import pic3 from '../public/eas3.webp';
 import pic4 from '../public/eas4.webp';
+
 const spanStyle = {
   padding: '20px',
   background: '#efefef',
@@ -39,29 +40,26 @@ export default function SimpleSlider(){
     dots: true,
     infinite: true,
     speed: 500,
-    height:500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed:2000,
+    autoplaySpeed:3000,
     autoplay:true,
     cssEase:"ease-in-out"
   };
   return (
     <div className='pb-6'>
-    <Slider {...settings} className={"pt-8 "}>
-         {slideImages.map((slideImage, index)=> (
-           <div key={index} style={{cursor: "pointer"}} onClick={()=>{console.log("hey");} }>
-
-             <div style={{height:400, backgroundImage: 'url('+slideImage.img.src+')',
-                 backgroundSize:     "cover",                      /* <------ */
-    backgroundRepeat:   "no-repeat",
-    backgroundPosition: "center center", }}>
-
-              </div>
-
-            </div>
-          ))} 
-    </Slider>
+      <Slider {...settings} className={"pt-8 "}>
+        {slideImages.map((slideImage, index)=> (
+          <div key={index} 
+            className='cursor-pointer'
+            onClick={()=>{console.log("hey");}}>
+            <Image
+              src={slideImage.img}
+              className="h-96 w-4/5 object-cover"
+            />
+          </div>
+        ))} 
+      </Slider>
     </div>
   );
 }
