@@ -7,10 +7,10 @@ export default function NavBar(){
   const [navbar, setNavbar] = useState();
   const [color, setColor] = useState("black");
   const routes=[
-    {name:"Home",url:"/page2",children:[]},
-    {name:"Blogs",url:"/page2",children:[]},
-    {name:"About US",url:"/page2",children:[]},
-    {name:"Contact Us",url:"/",children:[]},
+    {name:"Home",url:"/",children:[]},
+    {name:"Blogs",url:"/",children:[]},
+    {name:"About US",url:"/",children:[]},
+    {name:"Contact Us",url:"/about_us",children:[]},
   ]
 
   return  <nav className={'w-full bg-' +color +' shadow'}>

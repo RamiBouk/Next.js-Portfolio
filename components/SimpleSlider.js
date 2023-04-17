@@ -10,13 +10,6 @@ import pic2 from '../public/eas2.jpg';
 import pic3 from '../public/eas3.webp';
 import pic4 from '../public/eas4.webp';
 
-const spanStyle = {
-  padding: '20px',
-  background: '#efefef',
-  color: '#000000'
-}
-
-
 const slideImages = [
   {
     img: pic1,
