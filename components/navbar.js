@@ -9,7 +9,7 @@ export default function NavBar(){
   const routes=[
     {name:"Home",url:"/",children:[]},
     {name:"Blogs",url:"/",children:[]},
-    {name:"About US",url:"/",children:[]},
+    {name:"About US",url:"/TestingPage",children:[]},
     {name:"Contact Us",url:"/about_us",children:[]},
   ]
 

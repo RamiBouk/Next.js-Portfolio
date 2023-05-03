@@ -28,27 +28,52 @@ const slideImages = [
     caption: 'Slide 3'
   },
 ];
-export default function SimpleSlider(){
+export default function SmallSlider(){
   var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplaySpeed:3000,
-    autoplay:true,
-    cssEase:"ease-in-out"
+      focusOnSelect: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
   };
   return (
     <div className='pb-6'>
       <Slider {...settings} className={" pt-8 "}>
         {slideImages.map((slideImage, index)=> (
-          <div className=''>
+          <div className='pl-4 pr-4'>
             <Image
               src={slideImage.img}
               border="none"
-              className="h-[18rem]  md:h-[28rem]  object-cover"
+              className=" rounded-lg h-[6rem] w-[10rem]  md:w-[10rem] md:h-[6rem]  object-cover"
             />
+            <h3>
+              CE ATLETIC setif 4-0 Amjad Setif
+              </h3>
           </div>
         ))} 
       </Slider>
