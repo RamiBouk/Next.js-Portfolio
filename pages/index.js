@@ -19,18 +19,20 @@ export default function Home() {
 <center>
   <Fade >
       <BigSlider />
-    <h5 class="mb-2 italic text-[#004AADff] text-3xl tracking-tight ">
+    <h5 className="mb-2 italic text-[#004AADff] text-3xl tracking-tight ">
           Actuality
         </h5> 
       <div className='
       bg-[#004AADff]
         mb-4 mt-4
         max-w-2 mx-20 md:h-0.5 h-0.5'></div>
+    <div className='grid grid-cols-1 lg:grid-cols-2 pl-8'>
       <NewsCard />
       <NewsCard />
       <NewsCard />
       <NewsCard />
       <NewsCard />
+</div>
     <h5 className="mb-2 italic text-[#004AADff] text-3xl tracking-tight ">
       Match Results
         </h5> 
@@ -48,7 +50,7 @@ export default function Home() {
             <Image
               src={pic2}
               border="none"
-              className=" pl-8 pr-8 h-[12rem] w-[12rem]  md:w-[16rem] md:h-[12rem]  object-cover"
+              className=" pl-8 pr-8 h-[6rem] w-[10rem]  md:w-[16rem] md:h-[12rem]  object-cover"
             />
             <Image
               src={pic1}

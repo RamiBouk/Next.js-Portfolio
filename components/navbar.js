@@ -8,7 +8,7 @@ export default function NavBar(){
   const [color, setColor] = useState("black");
   const routes=[
     {name:"Home",url:"/",children:[]},
-    {name:"Blogs",url:"/",children:[]},
+    {name:"Matchs",url:"/testing_page",children:[]},
     {name:"About US",url:"/testing_page",children:[]},
     {name:"Contact Us",url:"/about_us",children:[]},
   ]
