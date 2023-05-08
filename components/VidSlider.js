@@ -36,20 +36,19 @@ const slideImages = [
     caption: 'CE Atletic Setif  8-0 CSA Borj'
   },
 ];
-export default function VidSlider(){
+export default function SmallSlider(){
   var settings = {
     dots:true,
-      infinite: true,
       focusOnSelect: true,
+      infinite: true,
       slidesToShow: 5,
-      slidesToScroll: 2,
-
+      slidesToScroll: 1,
       speed: 500,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
           }
@@ -57,16 +56,16 @@ export default function VidSlider(){
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            initialSlide: 3
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         }
       ]
@@ -75,14 +74,15 @@ export default function VidSlider(){
     <div className='pb-6'>
       <Slider {...settings} className={" pt-8 "}>
         {slideImages.map((slideImage, index)=> (
-          <div className='pl-4 pr-4 h-[5rem] '>
+          <div className='pl-4 pr-4'>
             <Image
               src={slideImage.img}
-              className=" rounded-lg h-[8rem] object-cover"
+              border="none"
+              className=" rounded-lg h-[6rem] w-[10rem]  md:w-[10rem] md:h-[6rem]  object-cover"
             />
-        <h5 className="mb-2 h-30 w-30 text-xl  tracking-tight ">
+            <h3>
               {slideImage.caption}
-              </h5>
+              </h3>
           </div>
         ))} 
       </Slider>

@@ -14,9 +14,9 @@ export default function NavBar(){
     {name:"Home",url:"/",children:[]},
     {name:"Matches",url:"/scores_page",children:[]},
     {name:"About US",url:"/scores_page",children:[]},
-    {name:"Contact Us",url:"/testing_page",children:[]},
+    {name:"Contact Us",url:"/vid_page",children:[]},
   ]
-  return  <nav className={'w-full bg-' +color +' z-50 shadow sticky top-0'}>
+  return  <nav className={'w-full bg-' +color +' z-30 shadow sticky top-0'}>
     <div className="
       transition transform ease-in-out duration-900
       bg-[#004AADff]
