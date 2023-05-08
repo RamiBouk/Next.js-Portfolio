@@ -30,6 +30,7 @@ const slideImages = [
 ];
 export default function SmallSlider(){
   var settings = {
+    dots:true,
       focusOnSelect: true,
       infinite: true,
       slidesToShow: 4,

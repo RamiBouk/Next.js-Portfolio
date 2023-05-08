@@ -30,7 +30,7 @@ const slideImages = [
 ];
 export default function BigSlider(){
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -40,14 +40,14 @@ export default function BigSlider(){
     cssEase:"ease-in-out"
   };
   return (
-    <div className='pb-6'>
-      <Slider {...settings} className={"  "}>
+    <div className='pb-6 md:w-screen '>
+      <Slider {...settings} className={"md:w-screen  "}>
         {slideImages.map((slideImage, index)=> (
           <div key={slideImage.caption}className=''>
             <Image
               src={slideImage.img}
               border="none"
-              className="h-[18rem]  md:h-[28rem]  object-cover"
+              className="h-[18rem]  md:h-[28rem] md:w-screen object-cover"
             />
           </div>
         ))} 

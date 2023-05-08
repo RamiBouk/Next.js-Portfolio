@@ -13,13 +13,14 @@ import "slick-carousel/slick/slick-theme.css";
 import SmallSlider from '@/components/SmallSlider'
 import pic1 from '../public/LNFF.jpeg';
 import pic2 from '../public/LNFF2.jpeg';
+import pic0 from '../public/eas4.webp';
 
 export default function Home() {
   return (
 <center>
   <Fade >
-      <BigSlider />
-    <h5 className="mb-2 italic text-[#004AADff] text-3xl tracking-tight ">
+      <BigSlider  />
+    <h5 className="mb-2 italic text-[#004AADff] text-4xl tracking-tight ">
           Actuality
         </h5> 
       <div className='
@@ -27,13 +28,12 @@ export default function Home() {
         mb-4 mt-4
         max-w-2 mx-20 md:h-0.5 h-0.5'></div>
     <div className='grid grid-cols-1 lg:grid-cols-2 pl-8'>
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
+      <NewsCard 
+        img={pic0}
+        title="some titile"
+      content="hye"/>
 </div>
-    <h5 className="mb-2 italic text-[#004AADff] text-3xl tracking-tight ">
+    <h5 className="mb-2 italic text-[#004AADff] text-4xl tracking-tight ">
       Match Results
         </h5> 
       <div className='

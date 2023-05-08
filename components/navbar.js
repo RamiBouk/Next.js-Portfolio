@@ -3,27 +3,29 @@ import Link from "next/link";
 import logo from "../public/EAS_logo.png";
 import Image from "next/image";
 
+
+
+
 export default function NavBar(){
   const [navbar, setNavbar] = useState();
   const [color, setColor] = useState("black");
+
   const routes=[
     {name:"Home",url:"/",children:[]},
-    {name:"Matchs",url:"/testing_page",children:[]},
-    {name:"About US",url:"/testing_page",children:[]},
-    {name:"Contact Us",url:"/about_us",children:[]},
+    {name:"Matches",url:"/scores_page",children:[]},
+    {name:"About US",url:"/scores_page",children:[]},
+    {name:"Contact Us",url:"/testing_page",children:[]},
   ]
-
-  return  <nav className={'w-full bg-' +color +' shadow'}>
+  return  <nav className={'w-full bg-' +color +' z-50 shadow sticky top-0'}>
     <div className="
       transition transform ease-in-out duration-900
       bg-[#004AADff]
-      hover:bg-black
       justify-between px-4 mx-auto lg:max-w-21xl md:items-center md:flex md:px-8"
 
        >
       <div>
         <div className="flex items-center justify-between py-1 md:py-1 md:block">
-          <Link href="#"className="hover:no-underline text-white">
+          <Link href="/"className="hover:no-underline text-white">
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li>
             <Image
@@ -67,18 +69,28 @@ export default function NavBar(){
       </div>
       <div>
         <div
-          className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+          className={`flex-1 justify-self-center pb-3 mt-8 
+          md:block md:pb-0 md:mt-0 ${
                 navbar ? 'block' : 'hidden'
-              } transition transform ease-in-out duration-900
+              } 
 `}
         >
-          <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+          <ul className="items-center justify-center
+            space-y-0 md:flex  md:space-y-0">
 
             {routes.map(route => 
-            (<li className="text-white">
-              <div className="">
-              <Link href={route.url} className="h-12 text-white">
+              (<li className="text-white w-30 md:w-[7rem] '} ">
+              <div className={`${navbar?'':'w-[7rem] '} flex  
+                items-center justify-center  `}>
+              <Link href={route.url} className={`h-16  
+              flex w-screen w-[18rem] text-xl text-[#FFFF01] items-center
+                ${navbar?'':'justify-center'}`} onClick={()=>{
+                if(navbar)
+                  setNavbar(!navbar)
+                }}>
+              <div >
                 {route.name}
+                </div>
               </Link>
                 </div>
             </li>)
