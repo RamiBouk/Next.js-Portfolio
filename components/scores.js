@@ -26,10 +26,10 @@ export function makeTitle(title) {
   return <div className='flex flex-row mt-12 mb-8
 
     '> 
-        <div className=' basis-[30%] justify-start'>
+        <div className=' basis-[40%] justify-start'>
           <center>
     <h5 className=" italic 
-      text-[#994444] text-3xl tracking-tight ">
+      text-[#994444] text-6xl ">
      {title} 
     </h5>
 
@@ -47,15 +47,17 @@ export function makeTitle(title) {
 
 }
 export function makeResutls(date,city,stadium,leage,team1,logo1,team2,logo2,score) {
-  return <div class="flex mb-4 ">
-    <div class="w-1/3 hidden md:block minh-10 ml-4 mb-8 block md:block">
-    <h5 className="mb-2 text-xl tracking-tight ">
+  return <div class="flex mb-4 items-start ">
+    <div 
+      class="w-1/3 hidden md:block 
+      minh-10 ml-4 mb-8 block md:block">
+    <h5 className="mb-2 text-4xl tracking-tight ">
       {date} 
         </h5> 
-    <h5 className="  text-[#539434] text-xl tracking-tight ">
+    <h5 className="  text-[#539434] text-3xl  ">
       {city}
         </h5> 
-    <h5 className="mb-1  text-[#539434] text- tracking-tight ">
+    <h5 className="mb-1  text-[#539434] text-3xl  ">
       {stadium}    
         </h5> 
   </div>
@@ -100,9 +102,9 @@ export function makeResutls(date,city,stadium,leage,team1,logo1,team2,logo2,scor
   
 }
 
-export default function TestingPage() {
+export default function Scores() {
     
-    let a=<>	  
+    let a=<Fade>	  
 {makeTitle('May 2023')}
       {makeResutls("FRI 12 MAY",'Setif','8 Mai 45 Stadium',
         leage1,
@@ -191,19 +193,8 @@ export default function TestingPage() {
       'CM BATNA',logo3,
       '2 - 0'
       )}
-      </>;
+      </Fade>;
       
-  return ( <div className=" py-[0.01rem] bg-[#EEEE96]">
-    <div className="m-[2rem] rounded-[30px] bg-white">
-      {//<Fade>
-      }
-    <h5 className="pt-8 mb-4 italic font-medium text-[#004AADff] text-4xl flex justify-center  ">
-            ETOILES ATLETIC SETIF
-        </h5> 
-      <Fade>
-        {a}
-     </Fade>
-    </div>
-    </div>
+  return ( a
   );
 }

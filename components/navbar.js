@@ -6,15 +6,15 @@ import Image from "next/image";
 
 
 
-export default function NavBar(){
+export default function NavBar(func1,func2,func3,func4){
   const [navbar, setNavbar] = useState();
   const [color, setColor] = useState("black");
 
   const routes=[
-    {name:"Home",url:"/",children:[]},
-    {name:"Matches",url:"/scores_page",children:[]},
-    {name:"About US",url:"/scores_page",children:[]},
-    {name:"Contact Us",url:"/vid_page",children:[]},
+    {name:"Home",func:func1,children:[]},
+    {name:"news",func:func2,children:[]},
+    {name:"Recent",func:func3,children:[]},
+    {name:"Results",func:func4,children:[]},
   ]
   return  <nav className={'w-full bg-' +color +' z-30 shadow sticky top-0'}>
     <div className="
@@ -34,9 +34,9 @@ export default function NavBar(){
             />
             </li>
             <li className="hidden no-underline md:block">
-              <h2 className={'text-2xl hover:text-white text-['+
+              <h2 className={'text-3xl hover:text-white text-['+
                 (color=='black'?('#FFFFFFFF'):('#FFFF01ff'))+
-                '] font-bold'}>
+                '] font-medium'}>
               
               EAS          </h2>
             </li>
@@ -82,16 +82,17 @@ export default function NavBar(){
               (<li className="text-white w-30 md:w-[7rem] '} ">
               <div className={`${navbar?'':'w-[7rem] '} flex  
                 items-center justify-center  `}>
-              <Link href={route.url} className={`h-16  
-              flex w-screen w-[18rem] text-xl text-[#FFFF01] items-center
+              <button  className={`h-16  
+              flex w-screen w-[18rem] text-2xl text-[#FFFF01] items-center
                 ${navbar?'':'justify-center'}`} onClick={()=>{
+                 route.func() 
                 if(navbar)
                   setNavbar(!navbar)
                 }}>
               <div >
                 {route.name}
                 </div>
-              </Link>
+              </button>
                 </div>
             </li>)
             )}

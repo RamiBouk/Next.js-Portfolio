@@ -41,7 +41,7 @@ export default function VidSlider(){
     dots:true,
       infinite: true,
       focusOnSelect: true,
-      slidesToShow: 5,
+      slidesToShow: 4,
       slidesToScroll: 2,
 
       speed: 500,
@@ -49,7 +49,7 @@ export default function VidSlider(){
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
           }
@@ -57,7 +57,7 @@ export default function VidSlider(){
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 3,
             initialSlide: 3
           }
@@ -78,9 +78,9 @@ export default function VidSlider(){
           <div className='pl-4 pr-4 h-[5rem] '>
             <Image
               src={slideImage.img}
-              className=" rounded-lg h-[8rem] object-cover"
+              className=" rounded-lg h-[10rem] object-cover"
             />
-        <h5 className="mb-2 h-30 w-30 text-xl  tracking-tight ">
+        <h5 className="mb-2 h-30 w-[20rem]  text-2xl  ">
               {slideImage.caption}
               </h5>
           </div>

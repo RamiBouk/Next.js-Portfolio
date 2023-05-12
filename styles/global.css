@@ -1,6 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "barselona-thin";
+  src: url("../public/fonts/FCBARCELONA-Thin.ttf");
+}
+
+@font-face {
+  font-family: "barselona-regular";
+  src: url("../public/fonts/BARCELONA-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: "barselona";
+  src: url("../public/fonts/barselona.ttf");
+}
+
+*{
+  font-family:'barselona-regular';
+}
 html,
 body{
   width:100%;
@@ -19,5 +39,14 @@ a {
 }
 a:hover{
   font-weight: 900;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
