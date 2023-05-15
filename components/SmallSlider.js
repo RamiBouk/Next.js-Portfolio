@@ -80,7 +80,7 @@ export default function VidSlider(){
               src={slideImage.img}
               className=" rounded-lg h-[10rem] object-cover"
             />
-        <h5 className="mb-2 h-30 w-[20rem]  text-2xl  ">
+            <h5 className="mb-2 h-30 md:w-[12rem] w-[10rem]  text-2xl  ">
               {slideImage.caption}
               </h5>
           </div>

@@ -25,7 +25,10 @@ export default function NavBar(func1,func2,func3,func4){
        >
       <div>
         <div className="flex items-center justify-between py-1 md:py-1 md:block">
-          <Link href="/"className="hover:no-underline text-white">
+          <button onClick={()=>{
+            func1()
+
+            }} className="hover:no-underline text-white">
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li>
             <Image
@@ -42,7 +45,7 @@ export default function NavBar(func1,func2,func3,func4){
             </li>
           </ul>
 
-          </Link>
+          </button>
           <div className="md:hidden">
             <button
               className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -86,6 +89,7 @@ export default function NavBar(func1,func2,func3,func4){
               flex w-screen w-[18rem] text-2xl text-[#FFFF01] items-center
                 ${navbar?'':'justify-center'}`} onClick={()=>{
                  route.func() 
+                  console.log('hey')
                 if(navbar)
                   setNavbar(!navbar)
                 }}>

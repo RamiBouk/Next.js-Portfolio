@@ -20,7 +20,9 @@ import NavBar from '../components/navbar';
 
 import pic5 from '../public/LNFF.jpeg';
 import pic6 from '../public/LNFF2.jpeg';
+import dynamic from 'next/dynamic'
 
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 export default function Home() {
   const homeRef = useRef(null)
   const actualiyRef = useRef(null)
@@ -28,13 +30,13 @@ export default function Home() {
   const scoresRef = useRef(null)
 
   const scrollHome = () => homeRef.current.scrollIntoView(
-    { behavior: 'smooth', block: 'center' }
+    { behavior: 'smooth', block: 'start' }
   )  
   const scrollActuality = () => actualiyRef.current.scrollIntoView(
-    { behavior: 'smooth', block: 'center' }
+    { behavior: 'smooth', block: 'start' }
   )  
   const scrollMatches = () => matchesRef.current.scrollIntoView(
-    { behavior: 'smooth', block: 'center' }
+    { behavior: 'smooth', block: 'start' }
   )  
   const scrollScores = () => {
     scoresRef.current.scrollIntoView(
@@ -42,6 +44,14 @@ export default function Home() {
 
 
   }
+  const a= <ReactPlayer 
+          loop={true}
+          playing={true}
+        controls={true}
+        volume={true}
+    pip={true}
+          url='vid0.mp4'
+        />
     
   return (<center>
 
@@ -52,30 +62,32 @@ export default function Home() {
     ()=>{scrollScores()}
     )}
     
+    <div ref={homeRef} className='scroll-my-[30rem] md:scroll-my-[20rem]' />
   <Fade >
-    <div className='absolute z-0 '>
+    <div className='absolute z-0  '>
       <Fade>
     <h5   className="pt-8 
       bg-gradient-to-r from-black 
       absolute  z-10 
-      italic  h-[33rem] w-screen
-      text-white text-9xl  scroll-my-[6rem]  flex justify-start  text-left ">
+      italic  md:h-[33rem] h-[18rem] w-screen
+      text-white md:text-9xl text-7xl  
+      flex justify-start  text-left ">
       ETOILES<br/> ATLETIC<br/>SETIF
 
         </h5> 
       </Fade>
-      <div className='blur-[2px] w-[95%] overflow-hidden'>
+      <div className='blur-[2px] w-screen  overflow-hidden'>
       <BigSlider />
       </div>
     </div>
       
-    <div ref={homeRef} className='h-[24rem]'>
+    <div className='h-[14rem] md:h-[24rem]'>
       
     </div>
     <div className='z-20 bg-white'>
-    <div ref={homeRef} />
-    <h5 ref={actualiyRef} className="mb-2 scroll-mb-[61rem]  text-[#004AADff] text-6xl
-      justify-start  mt-[4rem]">
+      <h5 ref={actualiyRef} className="mb-2 pt-[5rem]
+        text-[#004AADff] text-6xl
+      justify-start  mt-[4rem] scroll-my-[20rem] md:scroll-my-[0rem]">
           Actuality
         </h5> 
       <div className='
@@ -123,15 +135,21 @@ Algerian Cup 2023 | 28 April "/>
 
 
 </div>
-    <h5 ref={matchesRef} className="mb-2 mt-[2rem] text-[#004AADff] text-6xl scroll-mb-[61rem] ">
+    <h5 ref={matchesRef} className="mb-2 mt-[2rem] text-[#004AADff] text-6xl  pt-[5rem] scroll-my-[20rem] md:scroll-my-[0rem]
+     ">
       Recent Games
         </h5> 
       <div className='
       bg-[#004AADff]
         mb-4 mt-8
-        max-w-8 mx-20 md:h-0.5 h-0.5'></div>
+        max-w-8 mx-20 md:h-1 h-1'></div>
+    <div className='h-[20rem]'>
+      {a}
+      </div>
     <SmallSlider/>
-    <h5 ref={scoresRef} className="mb-2 scroll-my-[6rem] mt-[4rem] t text-[#004AADff] text-6xl  ">
+      <h5 ref={scoresRef} className="mb-2 
+        mt-[4rem] t text-[#004AADff] text-6xl  pt-[5rem] scroll-my-[20rem] md:scroll-my-[0rem] ">
+
       Match Results
         </h5> 
       <div className='
