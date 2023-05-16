@@ -104,7 +104,7 @@ export function makeResutls(date,city,stadium,leage,team1,logo1,team2,logo2,scor
 
 export default function Scores() {
     
-    let a=<Fade>	  
+  let a=	<>  
 {makeTitle('May 2023')}
       {makeResutls("FRI 12 MAY",'Setif','8 Mai 45 Stadium',
         leage1,
@@ -193,7 +193,7 @@ export default function Scores() {
       'CM BATNA',logo3,
       '2 - 0'
       )}
-      </Fade>;
+      </>;
       
   return ( a
   );
