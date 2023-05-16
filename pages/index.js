@@ -188,24 +188,6 @@ export default function Home() {
       justify-start  mt-[4rem] scroll-my-[20rem] md:scroll-my-[0rem]">
           Actuality
         </h5> 
-      <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    data-setup="{}"
-  >
-    <source src="../public/vid.mp4" type="video/mp4" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
       <div className='
       bg-[#004AADff]
         mb-4 mt-4
