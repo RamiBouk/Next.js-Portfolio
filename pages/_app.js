@@ -7,9 +7,22 @@ import fb from '../public/fb.png';
 import inst from '../public/inst.png';
 import whats from '../public/whats.png';
 import Image from 'next/image';
+
+import Head from 'next/head';
 import {mobileStepperClasses} from '@mui/material';
 export default function App({Component, pageProps}){
   return <>
+    <Head>
+      <link
+  href="https://unpkg.com/video.js@7/dist/video-js.min.css"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+  rel="stylesheet"
+/>
+      </Head>
     <Component className='minh-[40rem]' {...pageProps} />
   <footer className='h-50 text-white bg-[#004AADff]'>
     <center>
